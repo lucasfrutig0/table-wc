@@ -1,14 +1,10 @@
-import { ReactNode } from 'react'
+import Logo from '../Logo'
+import styles from './Header.module.css'
 
-interface HeaderProos {
-  children?: ReactNode
-}
-
-export default function Header({ children }: HeaderProos) {
+export default function Header() {
   return (
-    <header>
-      <h1>header</h1>
-      {children}
+    <header className={styles.header}>
+      <Logo />
     </header>
   )
 }
