@@ -1,10 +1,14 @@
 import Layout from '@/components/Layout'
+import Header from '@/components/Layout/Header'
 
 function App() {
   return (
-    <Layout>
-      <h1>Todo APP</h1>
-    </Layout>
+    <>
+      <Header />
+      <Layout>
+        <h1>Todo APP</h1>
+      </Layout>
+    </>
   )
 }
 
