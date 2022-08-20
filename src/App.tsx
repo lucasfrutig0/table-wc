@@ -1,3 +1,4 @@
+import Form from '@/components/Form'
 import Layout from '@/components/Layout'
 import Header from '@/components/Layout/Header'
 
@@ -6,7 +7,7 @@ function App() {
     <>
       <Header />
       <Layout>
-        <h1>Todo APP</h1>
+        <Form />
       </Layout>
     </>
   )
