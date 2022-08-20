@@ -6,6 +6,6 @@ import Header from '.'
 describe('Header Component', () => {
   it('should render withou crashing', () => {
     render(<Header />)
-    expect(screen.getByRole('heading', { name: /header/i })).toBeInTheDocument()
+    expect(screen.getByRole('banner')).toBeInTheDocument()
   })
 })
