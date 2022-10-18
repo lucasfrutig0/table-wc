@@ -32,14 +32,15 @@ jobs:
 
       - run: yarn install
       - run: yarn test
+      - run: yarn build
 
       - name: Deploy
         uses: reggionick/s3-deploy@v3
         with:
-          folder: build
-          bucket: ${{ secrets.S3_BUCKET }}
-          bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          folder: dist
+          bucket: tablewc
+          bucket-region: us-east-1
+          dist-id: E1J8KROBGTPUPX
           invalidation: /
           delete-removed: true
           no-cache: true
