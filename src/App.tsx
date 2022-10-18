@@ -7,7 +7,6 @@ function App() {
     <>
       <Header />
       <Layout>
-        <p>ALOHAAAAW</p>
         <Form />
       </Layout>
     </>
