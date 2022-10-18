@@ -7,7 +7,6 @@ function App() {
     <>
       <Header />
       <Layout>
-        <p>ALOHA1233213312</p>
         <Form />
       </Layout>
     </>
