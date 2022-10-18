@@ -7,7 +7,7 @@ function App() {
     <>
       <Header />
       <Layout>
-        a
+        <p>ALOHA</p>
         <Form />
       </Layout>
     </>
