@@ -1,7 +1,16 @@
 import { Form } from 'react-router-dom'
 
+type ContactType = {
+  first: string
+  last: string
+  avatar: string
+  twitter: string
+  notes: string
+  favorite: boolean
+}
+
 export default function Contact() {
-  const contact = {
+  const contact: ContactType = {
     first: 'Your',
     last: 'Name',
     avatar: 'https://placekitten.com/g/200/200',
@@ -10,17 +19,16 @@ export default function Contact() {
     favorite: true,
   }
 
-  function Favorite({ contact }) {
+  function Favorite(isFavorite: Pick<ContactType, 'favorite'>) {
     // yes, this is a `let` for later
-    const favorite = contact.favorite
     return (
       <Form method='post'>
         <button
           name='favorite'
-          value={favorite ? 'false' : 'true'}
-          aria-label={favorite ? 'Remove from favorites' : 'Add to favorites'}
+          value={isFavorite ? 'false' : 'true'}
+          aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
         >
-          {favorite ? '★' : '☆'}
+          {isFavorite ? '★' : '☆'}
         </button>
       </Form>
     )
@@ -29,7 +37,7 @@ export default function Contact() {
   return (
     <div id='contact'>
       <div>
-        <img key={contact.avatar} src={contact.avatar || null} alt='avatar' />
+        <img key={contact.avatar} src={contact.avatar} alt='avatar' />
       </div>
 
       <div>
@@ -41,7 +49,7 @@ export default function Contact() {
           ) : (
             <i>No Name</i>
           )}{' '}
-          <Favorite contact={contact} />
+          <Favorite favorite={contact.favorite} />
         </h1>
 
         {contact.twitter && (
