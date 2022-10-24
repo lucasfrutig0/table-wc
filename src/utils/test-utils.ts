@@ -1,5 +1,4 @@
 import { cleanup, render } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import React from 'react'
 import { afterEach } from 'vitest'
 
@@ -17,12 +16,6 @@ const customRender = (ui: React.ReactElement, options = {}) => {
 
 export * from '@testing-library/react'
 
-function setup(jsx: React.ReactElement) {
-  return {
-    user: userEvent.setup(),
-    ...render(jsx),
-  }
-}
+export { default as userEvent } from '@testing-library/user-event'
 
 export { customRender as render }
-export { setup }
