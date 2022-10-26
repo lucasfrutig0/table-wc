@@ -1,3 +1,4 @@
+import { Button } from '@chakra-ui/react'
 import { useState } from 'react'
 // import { Outlet, Link } from 'react-router-dom'
 
@@ -14,7 +15,9 @@ export default function Root() {
     <>
       <h1>List Players</h1>
       {JSON.stringify(data)}
-      <button onClick={handleClick}>Call API</button>
+      <Button colorScheme='blue' onClick={handleClick}>
+        Call API
+      </Button>
     </>
   )
 }
