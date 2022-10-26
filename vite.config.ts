@@ -13,6 +13,9 @@ export default defineConfig({
     coverage: {
       reporter: ['text', 'json', 'html'],
     },
+    deps: {
+      fallbackCJS: true,
+    },
   },
   resolve: {
     alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
